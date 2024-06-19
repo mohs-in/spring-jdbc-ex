@@ -12,11 +12,12 @@ public class StudentService {
 
     private StudentRepo repo;
 
-    @Autowired
+
     public StudentRepo getRepo() {
         return repo;
     }
 
+    @Autowired
     public void setRepo(StudentRepo repo) {
         this.repo = repo;
     }

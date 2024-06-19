@@ -16,15 +16,15 @@ public class SpringJdbcExApplication {
 		ApplicationContext context = SpringApplication.run(SpringJdbcExApplication.class, args);
 
 		Student s = context.getBean(Student.class);
+
 		s.setRollNo(101);
-		s.setName("Mohsin");
-		s.setMarks(88);
+		s.setName("Navin");
+		s.setMarks(78);
 
-		StudentService service = context.getBean(StudentService.class);
-
+		StudentService service=context.getBean(StudentService.class);
 		service.addStudent(s);
 
-		List<Student> students = service.getStudents();
+		List<Student> students=service.getStudents();
 		System.out.println(students);
 	}
 
